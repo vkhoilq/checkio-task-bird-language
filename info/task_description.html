@@ -1,44 +1,52 @@
 <p>
-    <i>( Describe task in general )</i>
+    Stephan has a friend -- the little mechbird. And he was trying to learn it to speak long time.
+    And today the bird said the first word "hieeelalaooo". This sounds like "hello" but with many vowels.
+    Stephan had asked to help Nikola and he examined how the bird changes words. Now we should to make the translator
+    module.
+</p>
+
+<div>
+    The bird converts words by two rules:
+<ul>
+    <li>after each consonant letter the bird append a random vowel letter (l ⇒ la or le);</li>
+    <li>after each vowel letter the bird append two same letters (a ⇒ aaa);</li>
+</ul>
+</div>
+<br>
+<p>
+    You given a bird phrase as several words which are separated by whitespaces (each pair of words by one whitespace).
+    The bird don't know punctuation symbols, just letters.
+    All words are given in lowercase.
+    You should translate this phrase from the bird language.
 </p>
 
 <p>
-    Sum two passed ints
-</p>
-
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <strong>Input: </strong> A bird phrase as a string.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> The translation as a string.
 </p>
-
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
+translate("hieeelalaooo") == "hello"
+translate("hoooowe aaareeee yyyooouuu duoooiiinege") == "how are you doing"
     </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    This like a cipher that is using by children when they invent their own "bird" language.
+    But now you will be ready ;-)
 </p>
 
 <p>
     <strong>Precondition:</strong>
-    <i>Constraints for Input</i>
+    re.match("\A([a-z]+\ ?)+(?<!\ )\Z", phrase)<br>
+    A phrase always has the translation.
 </p>
