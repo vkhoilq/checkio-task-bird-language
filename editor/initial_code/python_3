@@ -1,3 +1,5 @@
+VOWELS = "aeiouy"
+
 def translate(phrase):
     return phrase
 
