@@ -1,36 +1,64 @@
-"""
-TESTS is a dict with all you tests.
-Keys for this will be categories' names.
-Each test is dict with
-    "input" -- input data for user function
-    "answer" -- your right answer
-    "explanation" -- not necessary key, it's using for additional info in animation.
-"""
-
-
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": "hieeelalaooo",
+            "answer": "hello",
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
-        }
+            "input": "hoooowe yyyooouuu duoooiiine",
+            "answer": "how you doin",
+        },
+        {
+            "input": "aaa bo cy da eee fe",
+            "answer": "a b c d e f",
+        },
+        {
+            "input": "sooooso aaaaaaaaa",
+            "answer": "sos aaa",
+        },
+    ],
+    "Edge": [
+        {
+            "input": "aaa",
+            "answer": "a"
+        },
+        {
+            "input": "zy",
+            "answer": "z"
+        },
+        {
+            "input": "aaabucidyeeefigihoiiijukulemonoooopyqorysotauuuviwuxayyyzu ziyyyxuwivouuutesiriqopaooonimelykijaiiihigefaeeedacybuaaa",
+            "answer": "abcdefghijklmnopqrstuvwxyz zyxwvutsrqponmlkjihgfedcba"
+        },
+        {
+            "input": "aaaeeeiiiooouuuyyy",
+            "answer": "aeiouy"
+        },
+        {
+            "input": "bicydafagahajokulymonepyqarisytyvewexuzo",
+            "answer": "bcdfghjklmnpqrstvwxz"
+        },
     ],
     "Extra": [
         {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
+            "input": "laooorueeema iiipesiuuumo",
+            "answer": "lorem ipsum"
         },
         {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
-        }
+            "input": "tyooo bieee ooora nyooote tiooo byeee",
+            "answer": "to be or not to be"
+        },
+        {
+            "input": "baliaaa bolaaaa boloaaa baloaaa",
+            "answer": "bla bla bla bla"
+        },
+        {
+            "input": "doooo yyyooouuu sapieeeaaaky eeenugaleiiisyhy",
+            "answer": "do you speak english"
+        },
+        {
+            "input": "iii dyooony neoooto uuunadueeerisotoaaanydy yyyooouuu",
+            "answer": "i don not understand you"
+        },
     ]
 }
