@@ -1,0 +1,36 @@
+<p><img alt="byrd" class="for_info_only" src="{{MEDIA}}byrd03.png" style="float: left; padding-left: 5px; padding-right: 5px" title="byrd" width="200px" /></p>
+
+<p>Stephan tiene un amigo quien resulta ser un peque&ntilde;o p&aacute;jaro mec&aacute;nico (<em>mechbird</em>). Recientemente, &eacute;l estaba tratando de ense&ntilde;arle a su amigo c&oacute;mo hablar usando lenguaje b&aacute;sico, y el d&iacute;a de hoy, el p&aacute;jaro dijo su primera palabra: &quot;<em>hieeelalaooo</em>&quot;. Esto suena muy parecido a &quot;<em>hello</em>&quot; (&ldquo;hola&rdquo; en ingl&eacute;s), pero con demasiadas vocales. Stephan le pidi&oacute; ayuda a Nikola, y juntos, examinaron c&oacute;mo el ave cambia las palabras. Con la informaci&oacute;n que descubrieron, debemos ayudarles a crear un m&oacute;dulo de traducci&oacute;n.</p>
+
+<div>El p&aacute;jaro convierte las palabras siguiendo dos reglas:
+<ul>
+	<li>- despu&eacute;s de cada consonante, el p&aacute;jaro a&ntilde;ade una vocal aleatoria (l &rArr; la &oacute; le);</li>
+	<li>- despu&eacute;s de cada vocal, el p&aacute;jaro a&ntilde;ade dos veces dicha vocal (a &rArr; aaa);</li>
+</ul>
+<strong>Vocales == &quot;aeiouy&quot;.</strong></div>
+
+<p>&nbsp;</p>
+
+<p>Se te dar&aacute; una &ldquo;<em>frase ornitol&oacute;gica</em>&rdquo; como varias palabras separadas por espacios en blanco (cada par de palabras las separa un espacio). El p&aacute;jaro no sabe c&oacute;mo usar signos de puntuaci&oacute;n y por lo tanto s&oacute;lo usa letras en sus palabras. Todas las palabras est&aacute;n dadas en min&uacute;sculas. Deber&aacute;s traducir la frase de la lengua de aves a algo m&aacute;s comprensible.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Datos de Entrada: </strong> Una frase de nuestra ave, como una cadena (<em>str</em>).</p>
+
+<p><strong>Salida: </strong> La traducci&oacute;n, como una cadena (<em>str</em>).</p>
+
+<div class="for_info_only">
+<p><strong>Ejemplo:</strong></p>
+
+<pre class="brush: python">
+translate(&quot;hieeelalaooo&quot;) == &quot;hello&quot;
+translate(&quot;hoooowe yyyooouuu duoooiiine&quot;) == &quot;how you doin&quot;
+translate(&quot;aaa bo cy da eee fe&quot;) == &quot;a b c d e f&quot;
+translate(&quot;sooooso aaaaaaaaa&quot;) == &quot;sos aaa&quot;
+    </pre>
+</div>
+
+<p class="for_info_only"><strong>&iquest;C&oacute;mo se usa?: </strong> Este es una algoritmo de cifrado similar al que usan los ni&ntilde;os cuando inventan su propio lenguaje &quot;p&aacute;jaro&quot;. &iexcl;En adelante estar&aacute;s listo para descifrar su c&oacute;digo!</p>
+
+<p><strong>Condiciones:</strong> re.match(&quot;\A([a-z]+\ ?)+(?&lt;!\ )\Z&quot;, phrase)<br />
+La frase siempre tiene traducci&oacute;n.</p>
