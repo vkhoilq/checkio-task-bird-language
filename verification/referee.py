@@ -8,5 +8,8 @@ api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
-        function_name="translate"
+        function_name={
+            "python": "translate",
+            "js": "translate"
+        }
     ).on_ready)
