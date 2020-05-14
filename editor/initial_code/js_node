@@ -1,21 +1,18 @@
-"use strict";
+import assert from "assert";
 
-const VOWELS = "aeiouy"
-
-function translate(phrase){
-    return phrase
+function translate(text: string): string {
+    // your code here
+    return text;
 }
 
-var assert = require('assert');
+console.log('Example:');
+console.log(translate('hieeelalaooo'));
 
-if (!global.is_checking) {
-	console.log("Example:")
-	console.log(translate("hieeelalaooo"))
-	
-    assert.equal(translate("hieeelalaooo"), "hello", "Hi!");
-    assert.equal(translate("hoooowe yyyooouuu duoooiiine"), "how you doin", "Joey?");
-    assert.equal(translate("aaa bo cy da eee fe"), "a b c d e f", "Alphabet");
-    assert.equal(translate("sooooso aaaaaaaaa"), "sos aaa", "Mayday, mayday");
+// These "asserts" are used for self-checking
+assert.equal(translate('hieeelalaooo'), 'hello');
+assert.equal(translate('hoooowe yyyooouuu duoooiiine'), 'how you doin');
+assert.equal(translate('aaa bo cy da eee fe'), 'a b c d e f');
+assert.equal(translate('sooooso aaaaaaaaa'), 'sos aaa');
 
-    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
-}
+console.log("Coding complete? Click 'Check' to earn cool rewards!");
+    
