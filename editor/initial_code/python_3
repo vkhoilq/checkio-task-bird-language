@@ -1,4 +1,4 @@
-def translate(text: string) -> string:
+def translate(text: str) -> str:
     # your code here
     return None
 
