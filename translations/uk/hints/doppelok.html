@@ -1,0 +1,151 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        Я не знаю, як розпочати вирішення цієї місії
+    </div>
+    <div class="answer">
+        Тобі дано ключові моменти, які маєш знайти та замінити в рядку. Ну це ніби і з умови ясно.Ти можеш
+        це зробити за допомогою циклу, в якому ти будеш виконувати перевірки і заміняти елементи, або, що
+        краще, додавати зміни до якось списку чи рядку.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Мені потрібна допомога, щоб продовжити місію
+    </div>
+    <div class="answer">
+        Тобі буде корисно прочитати трохи інформації про:
+        <a href='https://www.codingem.com/slicing-in-python/'>зрізи</a>
+        <a href='https://docs.python.org/3/tutorial/controlflow.html'>цикли for та while</a>.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Потрібна допомога!
+    </div>
+    <div class="answer">
+        Визначимо змінну з голосними літерами letters, змінну де будемо зберігати результат new, та додаткову змінну index. А також застосуємо для нашого рішення цикл while.
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while ...:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я вже не знаю що робити. Мені потрібна маленька підказка.
+    </div>
+    <div class="answer">
+        За допомогою циклу while, ми пройдемося по нашому рядку. Для цього визначимо умову циклу. Ми будемо використовувати змінну index
+        в якості індексу елементу рядка, тому в циклі ми будемо його збільшувати на 1 кожного разу.
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    ...
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Нічого не працює. SOS
+    </div>
+    <div class="answer">
+        Додамо умови перевірки елементу. Наприклад якщо нам потрапить літера, якої немає в списку голосних літер,
+        то нам потрібно впевнитись, що після неї є одна голосна літера. Якщо нам потрапить літера, яка є в списку
+        голосних літер - нам потрібно впевнитись, що після неї йде ще дві таких самих літери. А також умову на перевірку,
+        чи елемент рядку це пробіл.
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    if text[index] == ' ':
+        ...
+    elif text[index] not in letters and text[index + 1] in letters:
+        ...
+    elif text[index] in letters:
+        if text[index:index + 3] == text[index] * 3:
+            ...
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Потрібна маленька підказка!
+    </div>
+    <div class="answer">
+        Тож нам потрібно при виконанні умов додавати літеру до нашої змінної new. При цьому потрібно врахувати, що якщо ми
+        додаємо не голосну букву, то наш індекс повинен зміститись на один елемент більше, а якщо голосну, то на два елементи.
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    if text[index] == ' ':
+        new += text[index]
+    elif text[index] not in letters and text[index + 1] in letters:
+        new += text[index]
+        index += 1
+    elif text[index] in letters:
+        if text[index:index + 3] == text[index] * 3:
+            new += text[index]
+            index += 2
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Не хочу здаватись, допоможи!
+    </div>
+    <div class="answer">
+        Тобі залишилось обгорнути код у вираз функції, та повернути нашу змінну new.
+        <pre class="brush: python">
+def translate(text: str) -> str:
+    letters = "aeiouy"
+    new = ''
+    index = 0
+    while index < len(text):
+        if text[index] == ' ':
+            new += text[index]
+        elif text[index] not in letters and text[index + 1] in letters:
+            new += text[index]
+            index += 1
+        elif text[index] in letters:
+            if text[index:index + 3] == text[index] * 3:
+                new += text[index]
+                index += 2
+        index += 1
+    return new
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я хочу бути кращим з кращих ПРОГРАМІСТІВ!!! ПОКАЖИ МЕНІ БІЛЬШЕ РІШЕНЬ!!1!!!11!
+    </div>
+    <div class="answer">
+        Добре, добре! Оце настрій!=)
+        Це рішення буде важкувато зрозуміти. Тут використовують модулі
+        <a href='https://docs.python.org/3.10/library/re.html'>"re"</a> та <a href='https://docs.python.org/3/library/functools.html'>"functools"</a>.
+        Оскільки за умовою задачі, ми можемо бути впевнені, що передається вірна фраза, то користуючись логікою: кожна літера, що
+        повторюється тричі - має повторюватись один раз, кожна літера яка не повторюється, а за нею є ще якась літера - має
+        бути без цієї ще якоїсь літери.
+        <pre class="brush: python">
+import re,functools
+
+
+translate=functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
+        </pre>
+    </div>
+</div>
+
+
+</body>

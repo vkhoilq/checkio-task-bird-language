@@ -1,63 +1,63 @@
 TESTS = {
     "Basics": [
         {
-            "input": "hieeelalaooo",
+            "input": ["hieeelalaooo"],
             "answer": "hello",
         },
         {
-            "input": "hoooowe yyyooouuu duoooiiine",
+            "input": ["hoooowe yyyooouuu duoooiiine"],
             "answer": "how you doin",
         },
         {
-            "input": "aaa bo cy da eee fe",
+            "input": ["aaa bo cy da eee fe"],
             "answer": "a b c d e f",
         },
         {
-            "input": "sooooso aaaaaaaaa",
+            "input": ["sooooso aaaaaaaaa"],
             "answer": "sos aaa",
         },
     ],
     "Edge": [
         {
-            "input": "aaa",
+            "input": ["aaa"],
             "answer": "a"
         },
         {
-            "input": "zy",
+            "input": ["zy"],
             "answer": "z"
         },
         {
-            "input": "aaabucidyeeefigihoiiijukulemonoooopyqorysotauuuviwuxayyyzu ziyyyxuwivouuutesiriqopaooonimelykijaiiihigefaeeedacybuaaa",
+            "input": ["aaabucidyeeefigihoiiijukulemonoooopyqorysotauuuviwuxayyyzu ziyyyxuwivouuutesiriqopaooonimelykijaiiihigefaeeedacybuaaa"],
             "answer": "abcdefghijklmnopqrstuvwxyz zyxwvutsrqponmlkjihgfedcba"
         },
         {
-            "input": "aaaeeeiiiooouuuyyy",
+            "input": ["aaaeeeiiiooouuuyyy"],
             "answer": "aeiouy"
         },
         {
-            "input": "bicydafagahajokulymonepyqarisytyvewexuzo",
+            "input": ["bicydafagahajokulymonepyqarisytyvewexuzo"],
             "answer": "bcdfghjklmnpqrstvwxz"
         },
     ],
     "Extra": [
         {
-            "input": "laooorueeema iiipesiuuumo",
+            "input": ["laooorueeema iiipesiuuumo"],
             "answer": "lorem ipsum"
         },
         {
-            "input": "tyooo bieee ooora nyooote tiooo byeee",
+            "input": ["tyooo bieee ooora nyooote tiooo byeee"],
             "answer": "to be or not to be"
         },
         {
-            "input": "baliaaa bolaaaa boloaaa baloaaa",
+            "input": ["baliaaa bolaaaa boloaaa baloaaa"],
             "answer": "bla bla bla bla"
         },
         {
-            "input": "doooo yyyooouuu sapieeeaaaky eeenugaleiiisyhy",
+            "input": ["doooo yyyooouuu sapieeeaaaky eeenugaleiiisyhy"],
             "answer": "do you speak english"
         },
         {
-            "input": "iii dyooony neoooto uuunadueeerisotoaaanydy yyyooouuu",
+            "input": ["iii dyooony neoooto uuunadueeerisotoaaanydy yyyooouuu"],
             "answer": "i don not understand you"
         },
     ]

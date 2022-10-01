@@ -22,19 +22,7 @@
 <div class="for_info_only">
 <p><strong>Ejemplo:</strong></p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">translate('hieeelalaooo') == 'hello'
-translate('hoooowe yyyooouuu duoooiiine') == 'how you doin'
-translate('aaa bo cy da eee fe') == 'a b c d e f'
-translate('sooooso aaaaaaaaa') == 'sos aaa'
-</pre>
-{% else %}
-<pre class="brush: python">translate('hieeelalaooo') == 'hello'
-translate('hoooowe yyyooouuu duoooiiine') == 'how you doin'
-translate('aaa bo cy da eee fe') == 'a b c d e f'
-translate('sooooso aaaaaaaaa') == 'sos aaa'
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only"><strong>&iquest;C&oacute;mo se usa?: </strong> Este es una algoritmo de cifrado similar al que usan los ni&ntilde;os cuando inventan su propio lenguaje &quot;p&aacute;jaro&quot;. &iexcl;En adelante estar&aacute;s listo para descifrar su c&oacute;digo!</p>
