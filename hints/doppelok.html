@@ -1,30 +1,39 @@
 <body data-author="Doppelok">
 <div class="question-answer">
     <div class="question">
-        I don't know how to start solving this mission
+        <p>
+            I don't know how to start solving this mission.
+        </p>
     </div>
     <div class="answer">
-        You are given key points to find and replace in the string. Well, it seems to be clear from the condition.
-        You can do it with the help of a loop in which you will perform checks and replace elements, or, what is
-        better, add changes to some kind of list or line.
+        <p>
+            You are given key points to find and replace in the string. Well, it seems to be clear from the condition. You can do it with the help of a loop in which you will perform checks and replace elements, or, what is better, add changes to some kind of list or line.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        I need help to continue the mission
+        <p>
+            I need help to continue the mission.
+        </p>
     </div>
     <div class="answer">
-        It will be useful for you to read some information about:
-        <a href='https://www.codingem.com/slicing-in-python/'>slicing</a>
-        <a href='https://docs.python.org/3/tutorial/controlflow.html'>for and while loops</a>.
+        <p>
+            It will be useful for you to read some information about: <a target="_blank"
+            href='https://www.codingem.com/slicing-in-python/'>slicing</a>, <a target="_blank" href='https://docs.python.org/3/tutorial/controlflow.html'>for and while loops</a>.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Need help!
+        <p>
+            Need help!
+        </p>
     </div>
     <div class="answer">
-        Let's define a variable with vowel letters <b class="code">letters</b>, a variable where we will store the result <b class="code">new</b>, and an additional variable <b class="code">index</b>. And we will also use a while loop for our solution.
+        <p>
+            Let's define a variable with vowel letters <b class="code">letters</b>, a variable where we will store the result <b class="code">new</b>, and an additional variable <b class="code">index</b>. And we will also use a <b class="code">while</b> loop for our solution.
+        </p>
         <pre class="brush: python">
 letters = "aeiouy"
 new = ''
@@ -36,11 +45,14 @@ while ...:
 </div>
 <div class="question-answer">
     <div class="question">
-        I don't know what to do anymore. I need a little hint.
+        <p>
+            I don't know what to do anymore. I need a little hint.
+        </p>
     </div>
     <div class="answer">
-        With the help of a while loop, we will go through our text. To do this, we define the cycle condition.
-        We will use the variable <b class="code">index</b> as the index of the text element, so in the loop we will increase it by 1 each time.
+        <p>
+            With the help of a while loop, we will go through our text. To do this, we define the cycle condition. We will use the variable <b class="code">index</b> as the index of the text element, so in the loop we will increase it by 1 each time.
+        </p>
         <pre class="brush: python">
 letters = "aeiouy"
 new = ''
@@ -53,13 +65,14 @@ while index < len(text):
 </div>
 <div class="question-answer">
     <div class="question">
-        Nothing works. SOS
+        <p>
+            Nothing works. SOS
+        </p>
     </div>
     <div class="answer">
-        Let's add the conditions for checking the element. For example, if we get a letter that is not in the
-        list of vowels, then we need to make sure that there is one vowel after it. If we get a letter that
-        is in the list of vowel letters - we need to make sure that there are two more the same letters after it.
-        And also a condition for checking whether a string element is a space.
+        <p>
+            Let's add the conditions for checking the element. For example, if we get a letter that is not in the list of vowels, then we need to make sure that there is one vowel after it. If we get a letter that is in the list of vowel letters - we need to make sure that there are two more the same letters after it. And also a condition for checking whether a string element is a space.
+        </p>
         <pre class="brush: python">
 letters = "aeiouy"
 new = ''
@@ -78,12 +91,14 @@ while index < len(text):
 </div>
 <div class="question-answer">
     <div class="question">
-        Need a little hint!
+        <p>
+            Need a little hint!
+        </p>
     </div>
     <div class="answer">
-        So we need to add a letter to our <b class="code">new</b> variable when the conditions are met. At the same time,
-        it should be taken into account that if we add a non-vowel letter, then our index must shift by
-        one more element, and if we add a vowel, then by two elements.
+        <p>
+            So we need to add a letter to our <b class="code">new</b> variable when the conditions are met. At the same time, it should be taken into account that if we add a non-vowel letter, then our index must shift by one more element, and if we add a vowel, then by two elements.
+        </p>
         <pre class="brush: python">
 letters = "aeiouy"
 new = ''
@@ -104,10 +119,14 @@ while index < len(text):
 </div>
 <div class="question-answer">
     <div class="question">
-        I don't want to give up, help!
+        <p>
+            I don't want to give up, help!
+        </p>
     </div>
     <div class="answer">
-        All you have to do is wrap the code in a function expression and return our <b class="code">new</b> variable.
+        <p>
+            All you have to do is wrap the code in a function expression and return our <b class="code">new</b> variable.
+        </p>
         <pre class="brush: python">
 def translate(text: str) -> str:
     letters = "aeiouy"
@@ -130,23 +149,20 @@ def translate(text: str) -> str:
 </div>
 <div class="question-answer">
     <div class="question">
-        I want to be the best of the best PROGRAMMERS!!! SHOW ME MORE SOLUTIONS!!1!!!11!
+        <p>
+            I want to be the best of the best PROGRAMMERS!!! SHOW ME MORE SOLUTIONS!!1!!!11!
+        </p>
     </div>
     <div class="answer">
-        Okay, okay! That's the spirit!=)
-        This decision will be difficult to understand. Modules are used here:
-        <a href='https://docs.python.org/3.10/library/re.html'>"re"</a> and <a href='https://docs.python.org/3/library/functools.html'>"functools"</a>.
-        Since under the condition of the mission, we can be sure that the correct phrase is transmitted, then using
-        logic: every letter that is repeated three times must be repeated once, every letter that is not
-        repeated, and there is another letter after it, must be without this one some letter
+        <p>
+            Okay, okay! That's the spirit!=) This decision will be difficult to understand. Modules are used here: <a target="_blank" href='https://docs.python.org/3.10/library/re.html'>re</a> and <a target="_blank" href='https://docs.python.org/3/library/functools.html'>functools</a>. Since under the condition of the mission, we can be sure that the correct phrase is transmitted, then using logic: every letter that is repeated three times must be repeated once, every letter that is not repeated, and there is another letter after it, must be without this one some letter
+        </p>
         <pre class="brush: python">
-import re,functools
+import re, functools
 
 
-translate=functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
+translate = functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
         </pre>
     </div>
 </div>
-
-
 </body>
