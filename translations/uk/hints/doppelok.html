@@ -126,6 +126,7 @@ while index < len(text):
         <p>
             Тобі залишилось обгорнути код у вираз функції, та повернути нашу змінну <b class="code">new</b>.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def translate(text: str) -> str:
     letters = "aeiouy"
@@ -144,6 +145,7 @@ def translate(text: str) -> str:
         index += 1
     return new
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -156,12 +158,14 @@ def translate(text: str) -> str:
         <p>
             Добре, добре! Оце настрій!=) Це рішення буде важкувато зрозуміти. Тут використовують модулі <a target="_blank" href='https://docs.python.org/3.10/library/re.html'>re</a> та <a target="_blank" href='https://docs.python.org/3/library/functools.html'>functools</a>. Оскільки за умовою задачі, ми можемо бути впевнені, що передається вірна фраза, то користуючись логікою: кожна літера, що повторюється тричі - має повторюватись один раз, кожна літера яка не повторюється, а за нею є ще якась літера - має бути без цієї ще якоїсь літери.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 import re, functools
 
 
 translate = functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
         </pre>
+        </div>
     </div>
 </div>
 </body>
