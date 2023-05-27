@@ -1,0 +1,172 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je ne sais pas comment commencer à résoudre cette mission.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            On vous donne des points clés à trouver et à remplacer dans la chaîne. La condition semble claire. Vous pouvez le faire à l'aide d'une boucle dans laquelle vous effectuerez des vérifications et remplacerez des éléments, ou, ce qui est mieux, ajouter des modifications à une sorte de liste ou de ligne.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            J'ai besoin d'aide pour poursuivre la mission.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Il vous sera utile de lire des informations sur: <a target="_blank"
+            href='https://www.codingem.com/slicing-in-python/'>slicing</a> <a target="_blank" href='https://docs.python.org/3/tutorial/controlflow.html'>for and while loops</a> .
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Besoin d'aide!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Définissons une variable avec des lettres voyelles <b class="code">letters</b>, une variable où nous stockerons le résultat <b class="code">new</b>, et une variable supplémentaire <b class="code">index</b>. Nous utiliserons également une boucle <b class="code">while</b> pour notre solution.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while ...:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je ne sais plus quoi faire. J'ai besoin d'un petit conseil.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            A l'aide d'une boucle while, nous allons parcourir notre texte. Pour ce faire, nous définissons la condition de cycle. Nous utiliserons la variable <b class="code">index</b> comme index de l'élément de texte, de sorte que dans la boucle, nous l'augmenterons de 1 à chaque fois.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    ...
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Rien ne fonctionne. SOS
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Ajoutons les conditions de vérification de l'élément. Par exemple, si nous obtenons une lettre qui ne figure pas dans la liste des voyelles, nous devons nous assurer qu'elle est suivie d'une voyelle. Si nous obtenons une lettre qui figure dans la liste des voyelles, nous devons nous assurer qu'elle est suivie de deux autres lettres identiques. Il existe également une condition permettant de vérifier si un élément de la chaîne est un espace.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    if text[index] == ' ':
+        ...
+    elif text[index] not in letters and text[index + 1] in letters:
+        ...
+    elif text[index] in letters:
+        if text[index:index + 3] == text[index] * 3:
+            ...
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Besoin d'un petit conseil!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Nous devons donc ajouter une lettre à notre variable <b class="code">new</b> lorsque les conditions sont remplies. En même temps, il faut tenir compte du fait que si nous ajoutons une lettre qui n'est pas une voyelle, notre index doit être décalé d'un élément supplémentaire, et si nous ajoutons une voyelle, alors de deux éléments.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    if text[index] == ' ':
+        new += text[index]
+    elif text[index] not in letters and text[index + 1] in letters:
+        new += text[index]
+        index += 1
+    elif text[index] in letters:
+        if text[index:index + 3] == text[index] * 3:
+            new += text[index]
+            index += 2
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je ne veux pas abandonner, aidez-moi!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Tout ce que vous avez à faire est d'envelopper le code dans une expression de fonction et de renvoyer notre variable <b class="code">new</b>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def translate(text: str) -> str:
+    letters = "aeiouy"
+    new = ''
+    index = 0
+    while index < len(text):
+        if text[index] == ' ':
+            new += text[index]
+        elif text[index] not in letters and text[index + 1] in letters:
+            new += text[index]
+            index += 1
+        elif text[index] in letters:
+            if text[index:index + 3] == text[index] * 3:
+                new += text[index]
+                index += 2
+        index += 1
+    return new
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je veux être le meilleur des meilleurs PROGRAMMEURS!!! MONTREZ-MOI D'AUTRES SOLUTIONS!!1!!!11!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            D'accord, d'accord! C'est l'esprit!=) Cette décision sera difficile à comprendre. Les modules utilisés ici sont: <a target="_blank" href='https://docs.python.org/3.10/library/re.html'>re</a> et <a target="_blank" href='https://docs.python.org/3/library/functools.html'>functools</a>. Puisque dans les conditions de la mission, nous pouvons être sûrs que la phrase correcte est transmise, alors en utilisant la logique: chaque lettre qui est répétée trois fois doit être répétée une fois, chaque lettre qui n'est pas répétée, et il y a une autre lettre après elle, doit être sans celle-ci une certaine lettre
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+import re, functools
+
+
+translate = functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
