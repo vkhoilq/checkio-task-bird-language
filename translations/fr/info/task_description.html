@@ -1,0 +1,55 @@
+<img class="for_info_only half" title="byrd" src="{{MEDIA}}byrd03.png" alt="byrd" style="float: left;"/>
+
+<p>
+    Stephan a un ami qui s'avère être un petit oiseau mécanique.
+    Récemment, il a essayé de lui apprendre à parler un langage élémentaire.
+    Aujourd'hui, l'oiseau a prononcé son premier mot: "hieeelalaooo".
+    Cela ressemble beaucoup à "hello", mais avec trop de voyelles.
+    Stephan a demandé de l'aide à Nikola, qui l'a aidé à examiner comment l'oiseau modifie les mots.
+    Grâce aux informations qu'ils ont découvertes, nous devrions les aider à créer un module de traduction.
+</p>
+
+<div>
+    L'oiseau convertit les mots selon deux règles:<br>
+<ul>
+    <li>- après chaque consonne, l'oiseau ajoute une voyelle au hasard (l ⇒ la ou le);</li>
+    <li>- après chaque voyelle, l'oiseau ajoute deux lettres identiques (a ⇒ aaa);</li>
+</ul>
+   <strong>Lettres voyelles == "aeiouy".</strong>
+</div>
+<br>
+<p>
+    On vous donne une phrase ornithologique sous forme de plusieurs mots séparés par des espaces blancs
+    (chaque paire de mots étant séparée par un espace).
+    L'oiseau ne sait pas ponctuer ses phrases et ne prononce que des mots sous forme de lettres.
+    Tous les mots sont en minuscules.
+    Vous devez traduire cette phrase de la langue des oiseaux en une langue plus compréhensible.
+</p>
+
+<p>
+   <strong>Entrée:</strong> Une phrase d'oiseau sous forme de <span>chaîne</span> <span>(string)</span>.
+</p>
+
+<p>
+   <strong>Sortie:</strong> La traduction sous forme de <span>chaîne</span> <span>(string)</span>.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemples de traductions:</strong>
+    </p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p class="for_info_only">
+   <strong>Comment il est utilisé:</strong>
+    Il s'agit d'un code similaire à ceux utilisés par les enfants lorsqu'ils inventent leur propre langue "des oiseaux".
+    Vous êtes maintenant prêt à déchiffrer le code.
+</p>
+
+<p>
+   <strong>Condition préalable:</strong>
+    re.match("\A([a-z]+\?)+(?&lt;!\ )\Z", phrase)<br>
+    Une phrase contient toujours la traduction.
+</p>
