@@ -1,0 +1,172 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nie wiem, jak zacząć rozwiązywać tę misję.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Dostaje Pan kluczowe punkty do znalezienia i zastąpienia w ciągu. Cóż, wydaje się, że wynika to jasno z warunku. Może Pan to zrobić za pomocą pętli, w której będzie Pan sprawdzał i zamieniał elementy, albo, co lepsze, dodawał zmiany do jakiejś listy lub wiersza.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Potrzebuję pomocy, aby kontynuować misję.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Przydatne dla Państwa będzie przeczytanie kilku informacji na temat: <a target="_blank"
+            href='https://www.codingem.com/slicing-in-python/'>slicing</a>, <a target="_blank" href='https://docs.python.org/3/tutorial/controlflow.html'>for and while loops</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Proszę o pomoc!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Zdefiniujmy zmienną z samogłoskami <b class="code">letters</b>, zmienną, w której będziemy przechowywać wynik <b class="code">new</b>, oraz dodatkową zmienną <b class="code">index</b>. Użyjemy również pętli <b class="code">while</b> dla naszego rozwiązania.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while ...:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nie wiem już, co robić. Potrzebuję małej podpowiedzi.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Za pomocą pętli while przejdziemy przez nasz tekst. W tym celu definiujemy warunek cyklu. Użyjemy zmiennej <b class="code">index</b> jako indeksu elementu tekstowego, więc w pętli będziemy zwiększać go o 1 za każdym razem.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    ...
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nic nie działa. SOS
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Dodajmy warunki sprawdzania elementu. Na przykład, jeśli otrzymamy literę, której nie ma na liście samogłosek, musimy upewnić się, że po niej jest jedna samogłoska. Jeśli otrzymamy literę, która znajduje się na liście samogłosek - musimy upewnić się, że po niej znajdują się jeszcze dwie takie same litery. A także warunek sprawdzający, czy element ciągu jest spacją.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    if text[index] == ' ':
+        ...
+    elif text[index] not in letters and text[index + 1] in letters:
+        ...
+    elif text[index] in letters:
+        if text[index:index + 3] == text[index] * 3:
+            ...
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Proszę o małą podpowiedź!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Musimy więc dodać literę do naszej zmiennej <b class="code">new</b>, gdy warunki zostaną spełnione. Jednocześnie należy wziąć pod uwagę, że jeśli dodamy literę niebędącą samogłoską, to nasz indeks musi przesunąć się o jeden element więcej, a jeśli dodamy samogłoskę, to o dwa elementy.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    if text[index] == ' ':
+        new += text[index]
+    elif text[index] not in letters and text[index + 1] in letters:
+        new += text[index]
+        index += 1
+    elif text[index] in letters:
+        if text[index:index + 3] == text[index] * 3:
+            new += text[index]
+            index += 2
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nie chcę się poddawać, proszę o pomoc!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Wszystko, co musi Pan zrobić, to zawinąć kod w wyrażenie funkcji i zwrócić naszą zmienną <b class="code">new</b>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def translate(text: str) -> str:
+    letters = "aeiouy"
+    new = ''
+    index = 0
+    while index < len(text):
+        if text[index] == ' ':
+            new += text[index]
+        elif text[index] not in letters and text[index + 1] in letters:
+            new += text[index]
+            index += 1
+        elif text[index] in letters:
+            if text[index:index + 3] == text[index] * 3:
+                new += text[index]
+                index += 2
+        index += 1
+    return new
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Chcę być najlepszym z najlepszych PROGRAMISTÓW!!! PROSZĘ POKAZAĆ MI WIĘCEJ ROZWIĄZAŃ!!!1!!!11!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Dobra, dobra! To jest duch!=) Ta decyzja będzie trudna do zrozumienia. Zastosowano tu moduły: <a target="_blank" href='https://docs.python.org/3.10/library/re.html'>re</a> i <a target="_blank" href='https://docs.python.org/3/library/functools.html'>functools</a>. Ponieważ w warunkach misji możemy być pewni, że przekazywana jest poprawna fraza, to używając logiki: każda litera, która powtarza się trzy razy, musi być powtórzona raz, każda litera, która się nie powtarza, a po niej jest inna litera, musi być bez tej jednej jakiejś litery
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+import re, functools
+
+
+translate = functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
