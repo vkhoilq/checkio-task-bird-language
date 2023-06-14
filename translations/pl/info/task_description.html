@@ -1,0 +1,55 @@
+<img class="for_info_only half" title="byrd" src="{{MEDIA}}byrd03.png" alt="byrd" style="float: left;"/>
+
+<p>
+    Stephan ma przyjaciela, który jest małym mechbirdem.
+    Ostatnio próbował nauczyć go mówić w podstawowym języku.
+    Dzisiaj ptak wypowiedział swoje pierwsze słowo: "hieeelalaooo".
+    Brzmi to bardzo podobnie do "cześć", ale ma zbyt wiele samogłosek.
+    Stephan poprosił Nikolę o pomoc i pomógł zbadać, jak ptak zmienia słowa.
+    Dzięki informacjom, które odkryli, powinniśmy pomóc im stworzyć moduł tłumaczenia.
+</p>
+
+<div>
+    Ptak przekształca słowa według dwóch zasad:<br>
+<ul>
+    <li>- po każdej literze spółgłoskowej ptak dodaje losową literę samogłoskową (l ⇒ la lub le);</li>
+    <li>- po każdej literze samogłoski ptak dołącza dwie takie same litery (a ⇒ aaa);</li>
+</ul>
+   <strong>Litery samogłosek == "aeiouy".</strong>
+</div>
+<br>
+<p>
+    Otrzymują Państwo frazę ornitologiczną jako kilka słów, które są oddzielone białymi spacjami
+    (każda para słów jest oddzielona jedną białą spacją).
+    Ptak nie wie, jak interpunkować swoje frazy i wypowiada słowa tylko jako litery.
+    Wszystkie słowa są pisane małymi literami.
+    Proszę przetłumaczyć to zdanie z języka ptaka na coś bardziej zrozumiałego.
+</p>
+
+<p>
+   <strong>Dane wejściowe:</strong> Wyrażenie w języku ptaków jako ciąg znaków <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Dane wyjściowe:</strong> Tłumaczenie jako ciąg znaków <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Przykłady:</strong>
+    </p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p class="for_info_only">
+   <strong>Jak jest używany:</strong>
+    Jest to podobny szyfr do tych używanych przez dzieci, gdy wymyślają swój własny "ptasi" język.
+    Teraz będą Państwo gotowi do złamania kodu.
+</p>
+
+<p>
+   <strong>Warunek wstępny:</strong>
+    re.match("\A([a-z]+\?)+(?&lt;!\ )\Z", phrase)<br>
+    Fraza zawsze ma tłumaczenie.
+</p>
