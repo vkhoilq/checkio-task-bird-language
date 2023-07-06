@@ -1,0 +1,55 @@
+<img class="for_info_only half" title="byrd" src="{{MEDIA}}byrd03.png" alt="byrd" style="float: left;"/>
+
+<p>
+    斯蒂芬有一个朋友，他正好是一只小机械鸟。
+    最近，他正试图教它说基本语言。
+    今天，这只鸟说出了它的第一个词："hieeelalaooo"。
+    这听起来很像 "你好"，但元音太多。
+    斯蒂芬向尼古拉寻求帮助，他帮助研究了这只鸟是如何改变单词的。
+    利用他们发现的信息，我们应该帮助他们制作一个翻译模块。
+</p>
+
+<div>
+    这只鸟通过两条规则转换单词：<br>
+<ul>
+    <li>- 在每个辅音字母后，鸟儿会随机添加一个元音字母（l ⇒ la 或 le）；</li>
+    <li>- 在每个元音字母后，鸟儿会附加两个相同的字母（a ⇒ aaa）；</li>
+</ul>
+   <strong>元音字母=="aeiouy"。</strong>
+</div>
+<br>
+<p>
+    你会得到一个鸟类学短语，它是由几个词组成的，这些词之间用白空格隔开
+    (每对词之间有一个空格)。
+    这只鸟不知道如何给它的短语加上标点符号，只把单词当作字母说。
+    所有的词都是小写的。
+    你应该把这句话从鸟语翻译成更容易理解的语言。
+</p>
+
+<p>
+   <strong>输入：</strong>一个字符串的鸟语短语 <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<p>
+   <strong>输出：</strong>翻译为一个字符串 <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>例子：</strong>
+    </p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p class="for_info_only">
+   <strong>它是如何被使用的：</strong>
+    这是一个类似于儿童在发明他们自己的 "鸟 "语时使用的密码。
+    现在你将准备好破解这个密码了。
+</p>
+
+<p>
+   <strong>前提条件：</strong>
+    re.match("\A([a-z]+\?)+(?&lt;!\ )\Z", phrase)<br>
+    一个短语总是有翻译的。
+</p>
