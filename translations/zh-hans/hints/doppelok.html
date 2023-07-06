@@ -1,0 +1,172 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不知道如何开始解决这个任务。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            你被赋予了关键点，要在字符串中找到并替换。好吧，从条件中似乎可以看出。你可以在一个循环的帮助下完成，在这个循环中，你将进行检查和替换元素，或者，最好是在某种列表或行中添加变化。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我需要帮助来继续完成任务。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            阅读一些有关的信息对你会有帮助：<a target="_blank"
+            href='https://www.codingem.com/slicing-in-python/'>slicing</a>,<a target="_blank" href='https://docs.python.org/3/tutorial/controlflow.html'>for and while loops</a> 。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            需要帮助!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            让我们定义一个带有元音字母的变量<b class="code">letters</b> ，一个我们将存储结果的变量<b class="code">new</b> ，以及一个额外的变量<b class="code">index</b> 。而且我们还将使用一个<b class="code">while</b> 循环来解决。
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while ...:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不知道该怎么做了。我需要一个小提示。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            在while循环的帮助下，我们将浏览我们的文本。要做到这一点，我们要定义循环条件。我们将使用变量<b class="code">index</b> 作为文本元素的索引，因此在循环中我们将每次增加1。
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    ...
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            没有任何效果。SOS
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            让我们添加检查元素的条件。例如，如果我们得到一个不在元音字母列表中的字母，那么我们需要确保它后面有一个元音字母。如果我们得到一个在元音字母列表中的字母--我们需要确保在它后面还有两个同样的字母。还有一个条件是检查一个字符串元素是否是空格。
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    if text[index] == ' ':
+        ...
+    elif text[index] not in letters and text[index + 1] in letters:
+        ...
+    elif text[index] in letters:
+        if text[index:index + 3] == text[index] * 3:
+            ...
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            需要一个小提示!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            所以我们需要在条件满足的情况下给我们的<b class="code">new</b> 变量添加一个字母。同时，应该考虑到，如果我们添加一个非元音字母，那么我们的索引必须多移一个元素，如果我们添加一个元音字母，那么要移两个元素。
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    if text[index] == ' ':
+        new += text[index]
+    elif text[index] not in letters and text[index + 1] in letters:
+        new += text[index]
+        index += 1
+    elif text[index] in letters:
+        if text[index:index + 3] == text[index] * 3:
+            new += text[index]
+            index += 2
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不想放弃，请帮助我!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            你所要做的就是把代码包在一个函数表达式中，并返回我们的<b class="code">new</b> 变量。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def translate(text: str) -> str:
+    letters = "aeiouy"
+    new = ''
+    index = 0
+    while index < len(text):
+        if text[index] == ' ':
+            new += text[index]
+        elif text[index] not in letters and text[index + 1] in letters:
+            new += text[index]
+            index += 1
+        elif text[index] in letters:
+            if text[index:index + 3] == text[index] * 3:
+                new += text[index]
+                index += 2
+        index += 1
+    return new
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我想成为最好的程序员中的最好的程序员!!!告诉我更多的解决方案!!!11!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            好的，好的!这就是精神！=)这个决定将很难理解。这里使用的模块是：<a target="_blank" href='https://docs.python.org/3.10/library/re.html'>re</a> 和<a target="_blank" href='https://docs.python.org/3/library/functools.html'>functools</a> 。既然在任务的条件下，我们可以确定传递的是正确的短语，那么利用逻辑：每一个重复了三次的字母必须重复一次，每一个没有重复的字母，在它后面还有一个字母，必须没有这个字母的一些字母
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+import re, functools
+
+
+translate = functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
