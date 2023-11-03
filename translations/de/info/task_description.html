@@ -1,0 +1,57 @@
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    Stephan hat einen Freund, der zufällig ein kleiner Mechvogel ist.
+    Vor kurzem hat er versucht, ihm eine einfache Sprache beizubringen.
+    Heute hat der Vogel sein erstes Wort gesprochen: "hieeelalaooo".
+    Das klingt so ähnlich wie "hallo", aber mit zu vielen Vokalen.
+    Stephan bat Nikola um Hilfe und er half ihm zu untersuchen, wie der Vogel Wörter verändert.
+    Mit den Informationen, die sie entdeckt haben, sollten wir ihnen helfen, ein Übersetzungsmodul zu erstellen.
+</p>
+
+<div>
+    Der Vogel wandelt Wörter nach zwei Regeln um:<br>
+<ul>
+    <li>- nach jedem Konsonanten fügt der Vogel einen zufälligen Vokalbuchstaben an (l ⇒ la oder le);</li>
+    <li>- nach jedem Vokalbuchstaben fügt der Vogel zwei Buchstaben desselben Wortes an (a ⇒ aaa);</li>
+</ul>
+   <strong>Vokale Buchstaben == "aeiouy".</strong>
+</div>
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}bird-language.png" alt="example" style="max-height: 200px"/>
+</p>
+
+<p>
+    Sie erhalten eine ornithologische Phrase als mehrere Wörter, die durch Leerzeichen getrennt sind
+    (jedes Wortpaar durch ein Leerzeichen).
+    Der Vogel weiß nicht, wie er seine Sätze interpunktieren soll und spricht die Wörter nur als Buchstaben.
+    Alle Wörter sind in Kleinbuchstaben angegeben.
+    Sie sollten diesen Satz aus der Vogelsprache in etwas Verständlicheres übersetzen.
+</p>
+
+<p>
+   <strong>Eingabe:</strong> Eine Vogelphrase als Zeichenkette <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> Die Übersetzung als Zeichenkette <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p class="for_info_only">
+   <strong>Wie sie verwendet wird:</strong>
+    Dies ist eine ähnliche Chiffre wie die, die Kinder verwenden, wenn sie ihre eigene "Vogelsprache" erfinden.
+    Jetzt sind Sie bereit, den Code zu knacken.
+</p>
+
+<p>
+   <strong>Vorbedingung:</strong>
+    re.match("\A([a-z]+\?)+(?&lt;!\ )\Z", phrase)<br>
+    Eine Phrase hat immer die Übersetzung.
+</p>
