@@ -1,0 +1,172 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ich weiß nicht, wie ich mit der Lösung dieser Aufgabe beginnen soll.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie erhalten Schlüsselpunkte, die Sie in der Zeichenkette finden und ersetzen müssen. Das scheint aus der Bedingung hervorzugehen. Sie können dies mit Hilfe einer Schleife tun, in der Sie Prüfungen durchführen und Elemente ersetzen, oder, was noch besser ist, Änderungen in eine Art Liste oder Zeile eintragen.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ich brauche Hilfe, um die Mission fortzusetzen.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Es wird nützlich für Sie sein, einige Informationen zu lesen: <a target="_blank"
+            href='https://www.codingem.com/slicing-in-python/'>slicing</a>, <a target="_blank" href='https://docs.python.org/3/tutorial/controlflow.html'>for and while loops</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Sie brauchen Hilfe!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Definieren wir eine Variable mit Vokalbuchstaben <b class="code">letters</b>, eine Variable, in der wir das Ergebnis <b class="code">new</b> speichern werden, und eine weitere Variable <b class="code">index</b>. Und wir werden auch eine <b class="code">while</b> Schleife für unsere Lösung verwenden.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while ...:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ich weiß nicht mehr, was ich tun soll. Ich brauche einen kleinen Tipp.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Mit Hilfe einer while-Schleife werden wir unseren Text durchgehen. Zu diesem Zweck definieren wir die Zyklusbedingung. Wir werden die Variable <b class="code">index</b> als Index des Textelements verwenden, so dass wir sie in der Schleife jedes Mal um 1 erhöhen.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    ...
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nichts funktioniert. SOS
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Fügen wir nun die Bedingungen für die Überprüfung des Elements hinzu. Wenn wir zum Beispiel einen Buchstaben erhalten, der nicht in der Liste der Vokale enthalten ist, müssen wir sicherstellen, dass ein Vokal dahinter steht. Wenn wir einen Buchstaben erhalten, der in der Liste der Vokalbuchstaben enthalten ist, müssen wir sicherstellen, dass zwei weitere gleiche Buchstaben nach ihm kommen. Und auch eine Bedingung, um zu prüfen, ob ein String-Element ein Leerzeichen ist.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    if text[index] == ' ':
+        ...
+    elif text[index] not in letters and text[index + 1] in letters:
+        ...
+    elif text[index] in letters:
+        if text[index:index + 3] == text[index] * 3:
+            ...
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ich brauche einen kleinen Tipp!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Wir müssen also einen Buchstaben zu unserer Variable <b class="code">new</b> hinzufügen, wenn die Bedingungen erfüllt sind. Dabei ist zu beachten, dass sich unser Index um ein weiteres Element verschieben muss, wenn wir einen Buchstaben ohne Vokal hinzufügen, und um zwei Elemente, wenn wir einen Vokal hinzufügen.
+        </p>
+        <pre class="brush: python">
+letters = "aeiouy"
+new = ''
+index = 0
+while index < len(text):
+    if text[index] == ' ':
+        new += text[index]
+    elif text[index] not in letters and text[index + 1] in letters:
+        new += text[index]
+        index += 1
+    elif text[index] in letters:
+        if text[index:index + 3] == text[index] * 3:
+            new += text[index]
+            index += 2
+    index += 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ich will nicht aufgeben, Hilfe!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Alles, was Sie tun müssen, ist, den Code in einen Funktionsausdruck zu verpacken und unsere Variable <b class="code">new</b> zurückzugeben.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def translate(text: str) -> str:
+    letters = "aeiouy"
+    new = ''
+    index = 0
+    while index < len(text):
+        if text[index] == ' ':
+            new += text[index]
+        elif text[index] not in letters and text[index + 1] in letters:
+            new += text[index]
+            index += 1
+        elif text[index] in letters:
+            if text[index:index + 3] == text[index] * 3:
+                new += text[index]
+                index += 2
+        index += 1
+    return new
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ich möchte der beste der besten PROGRAMMIERER werden!!! ZEIGEN SIE MIR MEHR LÖSUNGEN!!!1!!!11!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Okay, okay! Das ist die richtige Einstellung!=) Diese Entscheidung wird schwer zu verstehen sein. Hier werden Module verwendet: <a target="_blank" href='https://docs.python.org/3.10/library/re.html'>re</a> und <a target="_blank" href='https://docs.python.org/3/library/functools.html'>functools</a>. Da wir unter den Bedingungen der Mission sicher sein können, dass der richtige Satz übermittelt wird, müssen wir die Logik anwenden: Jeder Buchstabe, der dreimal wiederholt wird, muss einmal wiederholt werden, jeder Buchstabe, der nicht wiederholt wird und nach dem ein weiterer Buchstabe kommt, muss ohne diesen ein Buchstabe sein
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+import re, functools
+
+
+translate = functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
