@@ -11,7 +11,7 @@ api.add_listener(
         tests=TESTS,
         # checker=to_list,
         function_name={
-            "python": "translate",
+            "python": "translation",
             "js": "translate"
         },
         cover_code={
