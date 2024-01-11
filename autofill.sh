@@ -1,1 +1,1 @@
-checkio autofillrepo --py-function translate --js-function translate --not-multy .
+checkio autofillrepo --py-function translation --js-function translation --not-multy .

@@ -12,7 +12,7 @@ api.add_listener(
         # checker=to_list,
         function_name={
             "python": "translation",
-            "js": "translate"
+            "js": "translation"
         },
         cover_code={
             'python-3': {},

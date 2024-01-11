@@ -128,7 +128,7 @@ while index < len(text):
         </p>
         <div class="spoiler">
         <pre class="brush: python">
-def translate(text: str) -> str:
+def translation(text: str) -> str:
     letters = "aeiouy"
     new = ''
     index = 0
@@ -163,7 +163,7 @@ def translate(text: str) -> str:
 import re, functools
 
 
-translate = functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
+translation = functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
         </pre>
         </div>
     </div>
