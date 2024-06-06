@@ -5,7 +5,7 @@ TESTS = {
             "answer": "hello",
         },
         {
-            "input": ["hoooowe yyyooouuu duoooiiine"],
+            "input": ["hoooowe yyooouuu duoooiiine"],
             "answer": "how you doin",
         },
         {
